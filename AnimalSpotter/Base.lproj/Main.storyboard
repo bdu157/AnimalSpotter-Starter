@@ -70,6 +70,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HCO-4c-Ipd"/>
                     </view>
+                    <connections>
+                        <outlet property="loginTypeSegmentedControl" destination="aW1-IY-ebQ" id="uLH-Kp-4j7"/>
+                        <outlet property="passwordTextField" destination="Vga-nG-cJ8" id="7AQ-21-Ukh"/>
+                        <outlet property="signInButton" destination="l8d-j0-sqF" id="6Ma-o5-DOw"/>
+                        <outlet property="usernameTextField" destination="qpz-u1-zcQ" id="y9i-E3-5ze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdi-kT-dVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,7 +241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGh-9M-xc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279.71014492753625" y="732.58928571428567"/>
+            <point key="canvasLocation" x="404" y="733"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.23999999999999999" green="0.7066666667" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>

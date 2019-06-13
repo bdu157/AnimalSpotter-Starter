@@ -11,15 +11,15 @@ import UIKit
 class AnimalsTableViewController: UITableViewController {
     
     private var animalNames: [String] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var apiController = APIController()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // transition to login view if conditions require
+        if self.apiController.bearer == nil {
+            performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
+        }
     }
 
     // MARK: - Table view data source
@@ -40,6 +40,14 @@ class AnimalsTableViewController: UITableViewController {
     // MARK: - Actions
     @IBAction func getAnimals(_ sender: UIBarButtonItem) {
         // fetch all animals from API
+        self.apiController.fetchAllAnimalNames { (result) in
+            if let names = try? result.get() {       //becuase we used Result as closure parameter completion(.success(result))
+                DispatchQueue.main.async {
+                    self.animalNames = names
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     // MARK: - Navigation
@@ -48,9 +56,16 @@ class AnimalsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowAnimalDetailSegue" {
             // inject dependencies
-        }
-        else if segue.identifier == "LoginViewModalSegue" {
-            // inject dependencies
+            guard let detailVC = segue.destination as? AnimalDetailViewController,
+                let selectedRow = self.tableView.indexPathForSelectedRow else {return}
+            detailVC.apiController = self.apiController
+            detailVC.animalName = self.animalNames[selectedRow.row]
+            
+        } else if segue.identifier == "LoginViewModalSegue" {
+            //inject dependencies
+            if let loginVC = segue.destination as? LoginViewController {
+                loginVC.apiController = self.apiController  //passig this to loginViewController
+            }
         }
     }
 }

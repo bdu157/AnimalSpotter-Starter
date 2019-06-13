@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BF007B022B1E31F00B29A0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007AF22B1E31F00B29A0D /* User.swift */; };
+		0BF007B222B1E32600B29A0D /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007B122B1E32600B29A0D /* Bearer.swift */; };
+		0BF007B422B1E33200B29A0D /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF007B322B1E33200B29A0D /* Animal.swift */; };
 		CEDCA57B22668AB2009EA535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCA57A22668AB2009EA535 /* AppDelegate.swift */; };
 		CEDCA58022668AB2009EA535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDCA57E22668AB2009EA535 /* Main.storyboard */; };
 		CEDCA58222668AB2009EA535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDCA58122668AB2009EA535 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BF007AF22B1E31F00B29A0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0BF007B122B1E32600B29A0D /* Bearer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
+		0BF007B322B1E33200B29A0D /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		CEDCA57722668AB2009EA535 /* AnimalSpotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalSpotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDCA57A22668AB2009EA535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDCA57F22668AB2009EA535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BF007AE22B1E31000B29A0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BF007AF22B1E31F00B29A0D /* User.swift */,
+				0BF007B122B1E32600B29A0D /* Bearer.swift */,
+				0BF007B322B1E33200B29A0D /* Animal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CEDCA56E22668AB2009EA535 = {
 			isa = PBXGroup;
 			children = (
@@ -60,22 +76,15 @@
 		CEDCA57922668AB2009EA535 /* AnimalSpotter */ = {
 			isa = PBXGroup;
 			children = (
+				0BF007AE22B1E31000B29A0D /* Models */,
 				CEDCA59722669673009EA535 /* Application */,
 				CEDCA5982266967E009EA535 /* View Controllers */,
-				CEDCA5962266966C009EA535 /* Models */,
 				CEDCA57E22668AB2009EA535 /* Main.storyboard */,
 				CEDCA58122668AB2009EA535 /* Assets.xcassets */,
 				CEDCA58322668AB2009EA535 /* LaunchScreen.storyboard */,
 				CEDCA58622668AB2009EA535 /* Info.plist */,
 			);
 			path = AnimalSpotter;
-			sourceTree = "<group>";
-		};
-		CEDCA5962266966C009EA535 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		CEDCA59722669673009EA535 /* Application */ = {
@@ -169,7 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDCA59A226697BD009EA535 /* APIController.swift in Sources */,
+				0BF007B422B1E33200B29A0D /* Animal.swift in Sources */,
 				CEDCA59122668D0F009EA535 /* LoginViewController.swift in Sources */,
+				0BF007B022B1E31F00B29A0D /* User.swift in Sources */,
+				0BF007B222B1E32600B29A0D /* Bearer.swift in Sources */,
 				CEDCA58D22668B98009EA535 /* AnimalDetailViewController.swift in Sources */,
 				CEDCA57B22668AB2009EA535 /* AppDelegate.swift in Sources */,
 				CEDCA58F22668BCF009EA535 /* AnimalsTableViewController.swift in Sources */,
